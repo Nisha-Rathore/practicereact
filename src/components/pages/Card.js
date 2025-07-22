@@ -1,6 +1,5 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
-
 export const Card = ({ item }) => {
   // Arrow function to get image URL
   const getImage = () => {
@@ -46,7 +45,6 @@ export const Card = ({ item }) => {
                   (_, index) => <FaStar key={index} className="text-yellow-500" />
                 )}
               <span class="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">
-                {item.rating.toFixed(1)}
               </span>
             </div>
           </div>
