@@ -8,6 +8,9 @@ import Men from "./components/pages/Men";
 import Categories from "./components/pages/Categories";
 import Casual from "./components/pages/Casual";
 import Footwear from "./components/pages/Footwear.js";
+import Activewear from "./components/pages/Activewear.js";
+import Westernwear from "./components/pages/Westernwear.js";
+import Footer from "./components/Footer.js";
 
 function App({ title }) {
   return (
@@ -41,6 +44,11 @@ function App({ title }) {
           <Casual />
           <h2 className="text-2xl font-semibold p-5 mb-4">Footwear</h2>
           <Footwear/>
+           <h2 className="text-2xl font-semibold p-5 mb-4">Activewear</h2>
+          <Activewear />
+           <h2 className="text-2xl font-semibold p-5 mb-4">Westernwear</h2>
+          <Westernwear />
+          <Footer />
       </div>
     </>
   );
