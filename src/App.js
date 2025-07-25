@@ -61,7 +61,7 @@ function App({ title }) {
         <h2 className="text-2xl font-semibold p-5 mb-4">Westernwear</h2>
         <Westernwear />
         <Footer />
-        <Slider />
+        
       </div>
     </>
   );

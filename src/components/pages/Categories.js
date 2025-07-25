@@ -10,6 +10,9 @@ import Product7 from "../../images/ew7.webp";
 import Product8 from "../../images/ew8.webp";
 import Product9 from "../../images/ew9.webp";
 import Product10 from "../../images/ew10.webp";
+import Carousel from "react-multi-carousel";
+import { Responsive } from "../../utils/data";
+import Slider from "./Slide";
 
 function Categories({ item }) {
   const items = [
@@ -96,15 +99,32 @@ function Categories({ item }) {
   ];
 
   return (
-    <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1">
-        {items.map((category, i) =>
-          category.products.map((product, j) => (
-            <Card key={`${i}-${j}`} item={product} />
-          ))
-        )}
-      </div>
-    </div>
+     <div className="p-4 space-y-10">
+              {items.map((category, i) => (
+                <div key={i}>
+                  <h2 className="text-xl font-bold mb-4">{category.category}</h2>
+                  <div className="parent h-100">
+                    <Carousel
+                      responsive={Responsive}
+                      autoPlay={true}
+                      autoPlaySpeed={3000} // 5s interval
+                      swipeable={false}
+                      draggable={true}
+                      showDots={false}
+                      infinite={true}
+                      partialVisible={false}
+                      dotListClass="custom-dot-list-style"
+                    >
+                      {category.products.map((product, j) => (
+                        <div key={`${i}-${j}`} className="min-w-[250px] slider px-1">
+                          <Card item={product} />
+                        </div>
+                      ))}
+                    </Carousel>
+                  </div>
+                </div>
+              ))}
+            </div>
   );
 }
 

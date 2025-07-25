@@ -12,6 +12,7 @@ import Product9 from "../../images/fw7.jpg";
 import Product10 from "../../images/fw8.webp";
 import { Responsive } from "../../utils/data";
 import Carousel from "react-multi-carousel";
+import Slider from "./Slide";
 
 function Footwear() {
   const items = [
