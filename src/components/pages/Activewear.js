@@ -1,23 +1,22 @@
 import React from 'react'
 import { Card } from './Card';
-import Product1 from "../../images/cw1.jpg";
-import Product2 from "../../images/cw3.webp";
-import Product3 from "../../images/cw6.jpg";
-import Product4 from "../../images/cw4.webp";
-import Product5 from "../../images/cw5.jpg";
-import Product6 from "../../images/cw8.jpg";
-import Product7 from "../../images/cw10.jpg";
-import Product8 from "../../images/cw9.jpg";
-import Product9 from "../../images/cw2.jpg";
-import Product10 from "../../images/cw7.jpg";
+import Product1 from "../../images/a1.webp";
+import Product2 from "../../images/a10.jpg";
+import Product3 from "../../images/a2.jpg";
+import Product4 from "../../images/a9.webp";
+import Product5 from "../../images/a3.jpg";
+import Product6 from "../../images/a8.jpg";
+import Product7 from "../../images/a4.webp";
+import Product8 from "../../images/a7.jpg";
+import Product9 from "../../images/a5.webp";
+import Product10 from "../../images/a6.jpg";
 import Carousel from 'react-multi-carousel';
 import { Responsive } from '../../utils/data';
 import Slider from './Slide';
 
 
-
-function Casual({item}) {
-    const items =[
+const Activewear = () => {
+      const items =[
         {
       category:"Men's Wear",
       products:[{
@@ -96,7 +95,6 @@ function Casual({item}) {
       image: Product10
     },]
     }]
-
   return (
     <div className="p-4 space-y-10">
              {items.map((category, i) => (
@@ -127,4 +125,4 @@ function Casual({item}) {
   )
 }
 
-export default Casual;
+export default Activewear;

@@ -10,6 +10,10 @@ import Product7 from "../../images/boy1.jpg";
 import Product8 from "../../images/boys.jpg";
 import Product9 from "../../images/bshirt.jpg";
 import Product10 from "../../images/bwatch.jpg";  
+import Carousel from "react-multi-carousel";
+import { Responsive } from "../../utils/data";
+import Slider from "./Slide";
+
 export const Kids = ({ item }) => {
   const items = [
     {
@@ -85,12 +89,29 @@ export const Kids = ({ item }) => {
   ];
 
   return (
+    <>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1">
       {/* Render cards using items array */}
-      {items.map((item, index) => (
-        <Card key={index} item={item} />
-      ))}
-    </div>
+                          <Carousel
+                            responsive={Responsive}
+                            autoPlay={true}
+                            autoPlaySpeed={3000} // 5s interval
+                            swipeable={false}
+                            draggable={true}
+                            showDots={false}
+                            infinite={true}
+                            partialVisible={false}
+                            dotListClass="custom-dot-list-style"
+                          >
+                          </Carousel>
+                          {items.map((item, index) => (
+                            <div className="min-w-[250px] slider px-1">
+                            <Card key={index} item={item} />
+        
+                           ))};
+                           </div>
+     </div>
+     </>
   );
 };
 export default Kids;

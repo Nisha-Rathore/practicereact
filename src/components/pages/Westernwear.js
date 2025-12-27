@@ -1,23 +1,23 @@
 import React from 'react'
 import { Card } from './Card';
-import Product1 from "../../images/cw1.jpg";
-import Product2 from "../../images/cw3.webp";
-import Product3 from "../../images/cw6.jpg";
-import Product4 from "../../images/cw4.webp";
-import Product5 from "../../images/cw5.jpg";
-import Product6 from "../../images/cw8.jpg";
-import Product7 from "../../images/cw10.jpg";
-import Product8 from "../../images/cw9.jpg";
-import Product9 from "../../images/cw2.jpg";
-import Product10 from "../../images/cw7.jpg";
+import Product1 from "../../images/b1.webp";
+import Product2 from "../../images/b10.jpg";
+import Product3 from "../../images/b9.jpg";
+import Product4 from "../../images/b3.webp";
+import Product5 from "../../images/b2.webp";
+import Product6 from "../../images/b4.webp";
+import Product7 from "../../images/b5.webp";
+import Product8 from "../../images/b6.jpg";
+import Product9 from "../../images/b7.jpg";
+import Product10 from "../../images/b8.jpg";
 import Carousel from 'react-multi-carousel';
 import { Responsive } from '../../utils/data';
 import Slider from './Slide';
 
 
 
-function Casual({item}) {
-    const items =[
+const Westernwear = () => {
+     const items =[
         {
       category:"Men's Wear",
       products:[{
@@ -96,35 +96,35 @@ function Casual({item}) {
       image: Product10
     },]
     }]
-
+    
   return (
     <div className="p-4 space-y-10">
-             {items.map((category, i) => (
-               <div key={i}>
-                 <h2 className="text-xl font-bold mb-4">{category.category}</h2>
-                 <div className="parent h-100">
-                   <Carousel
-                     responsive={Responsive}
-                     autoPlay={true}
-                     autoPlaySpeed={3000} // 5s interval
-                     swipeable={false}
-                     draggable={true}
-                     showDots={false}
-                     infinite={true}
-                     partialVisible={false}
-                     dotListClass="custom-dot-list-style"
-                   >
-                     {category.products.map((product, j) => (
-                       <div key={`${i}-${j}`} className="min-w-[250px] slider px-1">
-                         <Card item={product} />
-                       </div>
-                     ))}
-                   </Carousel>
-                 </div>
-               </div>
-             ))}
-           </div>
+          {items.map((category, i) => (
+            <div key={i}>
+              <h2 className="text-xl font-bold mb-4">{category.category}</h2>
+              <div className="parent h-100">
+                <Carousel
+                  responsive={Responsive}
+                  autoPlay={true}
+                  autoPlaySpeed={3000} // 5s interval
+                  swipeable={false}
+                  draggable={true}
+                  showDots={false}
+                  infinite={true}
+                  partialVisible={false}
+                  dotListClass="custom-dot-list-style"
+                >
+                  {category.products.map((product, j) => (
+                    <div key={`${i}-${j}`} className="min-w-[250px] slider px-1">
+                      <Card item={product} />
+                    </div>
+                  ))}
+                </Carousel>
+              </div>
+            </div>
+          ))}
+        </div>
   )
 }
 
-export default Casual;
+export default Westernwear
